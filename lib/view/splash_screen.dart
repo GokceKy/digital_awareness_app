@@ -35,22 +35,13 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       body: Container(
         width: double.infinity,
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            colors: [
-              Color(0xFF03153A), // Tam opaklık, gri tonlarında bir renk
-              Color(0xFF033495), // Tam opaklık, koyu mor-mavi bir renk
-            ],
-            begin: Alignment.topRight,
-            end: Alignment.bottomLeft,
-          ),
-        ),
+        color: Theme.of(context).colorScheme.primary,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             // Icon yerine Image widget'ı kullanılıyor
             Image.asset(
-              'assets/ikonone.png', // PNG dosyasının yolu
+              'assets/ikontwo.png', // PNG dosyasının yolu
               width: 96, // Genişlik
               height: 96, // Yükseklik
             ),
@@ -59,7 +50,6 @@ class _SplashScreenState extends State<SplashScreen> {
               'Digital Awareness',
               style: TextStyle(
                 fontSize: 24,
-                color: Colors.white,
                 fontWeight: FontWeight.bold,
               ),
             ),
