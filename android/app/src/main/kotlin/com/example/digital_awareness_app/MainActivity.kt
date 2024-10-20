@@ -1,4 +1,4 @@
-package com.example.digital_awareness_app
+package com.digitalawareness.app
 
 import io.flutter.embedding.android.FlutterActivity
 

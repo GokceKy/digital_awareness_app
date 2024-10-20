@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "74291696584",
+    "project_id": "digital-awareness-da814",
+    "storage_bucket": "digital-awareness-da814.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:74291696584:android:e78ea214448bba0baea6fd",
+        "android_client_info": {
+          "package_name": "com.digitalawareness.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUoTsnLbBI91PLQex7v_P_Vab1Xu3X-2M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
