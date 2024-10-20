@@ -1,4 +1,5 @@
 import 'package:digital_awareness_app/main.dart';
+import 'package:digital_awareness_app/view/auth/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -18,7 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(
             builder: (context) =>
-                const HomeScreen()), // HomeScreen widget'ınızı buraya koyun
+                LoginScreen()), // HomeScreen widget'ınızı buraya koyun
       );
     });
   }
