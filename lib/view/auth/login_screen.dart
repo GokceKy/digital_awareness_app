@@ -1,12 +1,18 @@
 import 'package:digital_awareness_app/product/widgets/auth_button.dart';
 import 'package:digital_awareness_app/product/widgets/textfield.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
   LoginScreen({super.key});
-  final usernameController = TextEditingController();
+  final emailController = TextEditingController();
   final passwordController = TextEditingController();
-  void signUserIn() {}
+  void signUserIn() async {
+    await FirebaseAuth.instance.signInWithEmailAndPassword(
+      email: emailController.text,
+      password: passwordController.text,
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -36,8 +42,8 @@ class LoginScreen extends StatelessWidget {
                 const SizedBox(height: 50),
 
                 Textfield(
-                  controller: usernameController,
-                  hintText: 'username',
+                  controller: emailController,
+                  hintText: 'email',
                   obscureText: false,
                 ),
                 const SizedBox(height: 10),
