@@ -1,4 +1,5 @@
 import 'package:digital_awareness_app/main.dart';
+import 'package:digital_awareness_app/view/auth/login_or_register_screen.dart';
 import 'package:digital_awareness_app/view/auth/login_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
@@ -19,7 +20,7 @@ class AuthScreen extends StatelessWidget {
             }
             //user is Not Logged in
             else {
-              return LoginScreen();
+              return LoginOrRegisterScreen();
             }
           }),
     );

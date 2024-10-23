@@ -3,20 +3,20 @@ import 'package:digital_awareness_app/product/widgets/textfield.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
-class LoginScreen extends StatefulWidget {
+class RegisterScreen extends StatefulWidget {
   final Function()? onTap;
-  const LoginScreen({super.key, required this.onTap});
+  const RegisterScreen({super.key, required this.onTap});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<RegisterScreen> createState() => _RegisterScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _RegisterScreenState extends State<RegisterScreen> {
   final emailController = TextEditingController();
 
   final passwordController = TextEditingController();
-
-  void signUserIn() async {
+  final confirmPasswordController = TextEditingController();
+  void signUserUp() async {
     showDialog(
       context: context,
       builder: (context) {
@@ -25,10 +25,15 @@ class _LoginScreenState extends State<LoginScreen> {
         );
       },
     );
-    await FirebaseAuth.instance.signInWithEmailAndPassword(
-      email: emailController.text,
-      password: passwordController.text,
-    );
+    if (passwordController.text == confirmPasswordController.text) {
+      await FirebaseAuth.instance.createUserWithEmailAndPassword(
+        email: emailController.text,
+        password: passwordController.text,
+      );
+    } else {
+      //error message
+    }
+
     Navigator.pop(context);
   }
 
@@ -51,7 +56,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 const SizedBox(height: 50),
                 Text(
-                  "Welcome back you\'ve been missed!",
+                  "Let\'s create an account for you!",
                   style: TextStyle(
                     color: Colors.grey[700],
                     fontSize: 16,
@@ -61,43 +66,34 @@ class _LoginScreenState extends State<LoginScreen> {
 
                 Textfield(
                   controller: emailController,
-                  hintText: 'email',
+                  hintText: 'Email',
                   obscureText: false,
                 ),
                 const SizedBox(height: 10),
 
                 Textfield(
                   controller: passwordController,
-                  hintText: 'password',
+                  hintText: 'Password',
                   obscureText: true,
                 ),
                 const SizedBox(height: 10),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 25),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Text(
-                        "Forgot Password?",
-                        style: TextStyle(
-                          color: Colors.grey[600],
-                          fontSize: 16,
-                        ),
-                      ),
-                    ],
-                  ),
+                Textfield(
+                  controller: confirmPasswordController,
+                  hintText: 'Confirm password',
+                  obscureText: true,
                 ),
+
                 const SizedBox(height: 25),
                 AuthButton(
-                  text: "Sign In",
-                  onTap: signUserIn,
+                  text: "Sign Up",
+                  onTap: signUserUp,
                 ),
                 const SizedBox(height: 50),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      "Not a member?",
+                      "Already have an account?",
                       style: TextStyle(
                         color: Colors.grey[700],
                       ),
@@ -106,7 +102,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     GestureDetector(
                       onTap: widget.onTap,
                       child: Text(
-                        "Register now",
+                        "Login now",
                         style: TextStyle(
                           color: Colors.black,
                         ),

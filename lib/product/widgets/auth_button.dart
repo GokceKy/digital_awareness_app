@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class AuthButton extends StatelessWidget {
   final Function()? onTap;
-  const AuthButton({super.key, this.onTap});
+  final String text;
+  const AuthButton({super.key, this.onTap, required this.text});
 
   @override
   Widget build(BuildContext context) {
@@ -15,9 +16,9 @@ class AuthButton extends StatelessWidget {
           color: Colors.black,
           borderRadius: BorderRadius.circular(8),
         ),
-        child: const Center(
+        child: Center(
           child: Text(
-            "Sign In",
+            text,
             style: TextStyle(
                 color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16),
           ),
