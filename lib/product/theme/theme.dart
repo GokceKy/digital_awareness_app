@@ -3,16 +3,16 @@ import 'package:flutter/material.dart';
 ThemeData lightMode = ThemeData(
   brightness: Brightness.light,
   colorScheme: ColorScheme.light(
-    background: Colors.grey.shade400,
-    primary: Colors.grey.shade300,
-    secondary: Colors.grey.shade200,
+    surface: Colors.white,
+    primary: const Color.fromRGBO(23, 63, 53, 1),
+    secondary: const Color.fromRGBO(183, 206, 149, 1),
   ),
 );
 ThemeData darkMode = ThemeData(
   brightness: Brightness.dark,
   colorScheme: ColorScheme.dark(
-    background: Colors.grey.shade900,
-    primary: Colors.grey.shade800,
-    secondary: Colors.grey.shade700,
+    surface: const Color.fromRGBO(18, 32, 28, 1), // Daha koyu yüzey rengi
+    primary: const Color.fromRGBO(23, 63, 53, 1), // Aynı ana renk
+    secondary: const Color.fromARGB(255, 34, 92, 77),
   ),
 );

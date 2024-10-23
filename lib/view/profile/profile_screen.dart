@@ -5,25 +5,13 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-class HomeScreen extends StatelessWidget {
-  HomeScreen({super.key});
+class ProfileScreen extends StatelessWidget {
   final user = FirebaseAuth.instance.currentUser!;
-
-  void signUserOut() {
-    FirebaseAuth.instance.signOut();
-  }
+  ProfileScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        actions: [
-          IconButton(
-            onPressed: signUserOut,
-            icon: const Icon(Icons.logout),
-          )
-        ],
-      ),
       backgroundColor: Theme.of(context).colorScheme.surface,
       body: Center(
         child: Column(
@@ -31,6 +19,17 @@ class HomeScreen extends StatelessWidget {
           children: [
             Text(
               'Welcome :${user.email!}',
+            ),
+            const SizedBox(height: 16),
+            MyBox(
+              color: Theme.of(context).colorScheme.primary,
+              child: MyButton(
+                color: Theme.of(context).colorScheme.secondary,
+                onTap: () {
+                  Provider.of<ThemeProvider>(context, listen: false)
+                      .toggleTheme();
+                },
+              ),
             ),
           ],
         ),
