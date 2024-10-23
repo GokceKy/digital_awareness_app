@@ -1,3 +1,4 @@
+import 'package:digital_awareness_app/product/widgets/custom_app_bar.dart';
 import 'package:digital_awareness_app/view/home/home_screen.dart';
 import 'package:digital_awareness_app/view/profile/profile_screen.dart';
 import 'package:flutter/material.dart';
@@ -20,6 +21,14 @@ class _BaseScreenState extends State<BaseScreen> {
     ProfileScreen(), // 3 - Profile
   ];
 
+  // Sayfa başlıklarının listesi
+  final List<String> _titles = [
+    'Home', // Title for Home
+    'Help', // Title for Help
+    'Clear', // Title for Clear
+    'Profile', // Title for Profile
+  ];
+
   // İkonlardan birine tıklandığında çalışacak fonksiyon
   void _onItemTapped(int index) {
     setState(() {
@@ -30,6 +39,7 @@ class _BaseScreenState extends State<BaseScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: CustomAppBar(text: _titles[_selectedIndex]), // Dynamic title
       body: IndexedStack(
         index: _selectedIndex,
         children: _pages,

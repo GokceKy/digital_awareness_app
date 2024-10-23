@@ -1,4 +1,3 @@
-import 'package:digital_awareness_app/product/theme/theme.dart';
 import 'package:digital_awareness_app/product/theme/theme_provider.dart';
 import 'package:digital_awareness_app/view/splash_screen.dart';
 import 'package:flutter/material.dart';
