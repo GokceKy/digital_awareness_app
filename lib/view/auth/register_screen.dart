@@ -1,5 +1,5 @@
 import 'package:digital_awareness_app/product/widgets/auth_button.dart';
-import 'package:digital_awareness_app/product/widgets/textfield.dart';
+import 'package:digital_awareness_app/product/widgets/custom_textfield.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -64,20 +64,20 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 ),
                 const SizedBox(height: 50),
 
-                Textfield(
+                CustomTextfield(
                   controller: emailController,
                   hintText: 'Email',
                   obscureText: false,
                 ),
                 const SizedBox(height: 10),
 
-                Textfield(
+                CustomTextfield(
                   controller: passwordController,
                   hintText: 'Password',
                   obscureText: true,
                 ),
                 const SizedBox(height: 10),
-                Textfield(
+                CustomTextfield(
                   controller: confirmPasswordController,
                   hintText: 'Confirm password',
                   obscureText: true,

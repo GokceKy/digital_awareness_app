@@ -1,3 +1,4 @@
+import 'package:digital_awareness_app/view/home/custom_search_bar.dart.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -13,8 +14,16 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text(
-              'Welcome :${user.email!}',
+            Padding(
+              padding: const EdgeInsets.only(
+                  top: 10), // Üstten boşluk ekleyebilirsiniz
+              child: CustomSearchBar(),
+            ),
+            const SizedBox(height: 20),
+            Expanded(
+              child: Text(
+                'Welcome :${user.email!}',
+              ),
             ),
           ],
         ),
