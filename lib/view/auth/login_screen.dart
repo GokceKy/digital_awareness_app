@@ -20,7 +20,7 @@ class _LoginScreenState extends State<LoginScreen> {
     showDialog(
       context: context,
       builder: (context) {
-        return Center(
+        return const Center(
           child: CircularProgressIndicator(),
         );
       },
@@ -105,7 +105,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     const SizedBox(width: 4),
                     GestureDetector(
                       onTap: widget.onTap,
-                      child: Text(
+                      child: const Text(
                         "Register now",
                         style: TextStyle(
                           color: Colors.black,

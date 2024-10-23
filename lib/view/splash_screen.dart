@@ -1,6 +1,4 @@
-import 'package:digital_awareness_app/main.dart';
 import 'package:digital_awareness_app/view/auth/auth_screen.dart';
-import 'package:digital_awareness_app/view/auth/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -18,9 +16,7 @@ class _SplashScreenState extends State<SplashScreen> {
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
     Future.delayed(const Duration(seconds: 4), () {
       Navigator.of(context).pushReplacement(
-        MaterialPageRoute(
-            builder: (context) =>
-                AuthScreen()), // HomeScreen widget'ınızı buraya koyun
+        MaterialPageRoute(builder: (context) => const AuthScreen()),
       );
     });
   }
@@ -41,11 +37,10 @@ class _SplashScreenState extends State<SplashScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // Icon yerine Image widget'ı kullanılıyor
             Image.asset(
-              'assets/ikontwo.png', // PNG dosyasının yolu
-              width: 96, // Genişlik
-              height: 96, // Yükseklik
+              'assets/ikontwo.png',
+              width: 96,
+              height: 96,
             ),
             const SizedBox(height: 30),
             const Text(

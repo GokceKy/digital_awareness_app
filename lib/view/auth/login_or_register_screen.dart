@@ -1,6 +1,5 @@
 import 'package:digital_awareness_app/view/auth/login_screen.dart';
 import 'package:digital_awareness_app/view/auth/register_screen.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 
 class LoginOrRegisterScreen extends StatefulWidget {

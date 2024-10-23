@@ -20,7 +20,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
     showDialog(
       context: context,
       builder: (context) {
-        return Center(
+        return const Center(
           child: CircularProgressIndicator(),
         );
       },
@@ -56,7 +56,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 ),
                 const SizedBox(height: 50),
                 Text(
-                  "Let\'s create an account for you!",
+                  "Let's create an account for you!",
                   style: TextStyle(
                     color: Colors.grey[700],
                     fontSize: 16,
@@ -101,7 +101,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     const SizedBox(width: 4),
                     GestureDetector(
                       onTap: widget.onTap,
-                      child: Text(
+                      child: const Text(
                         "Login now",
                         style: TextStyle(
                           color: Colors.black,
