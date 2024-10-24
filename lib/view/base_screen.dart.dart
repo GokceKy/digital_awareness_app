@@ -1,4 +1,5 @@
 import 'package:digital_awareness_app/product/widgets/custom_app_bar.dart';
+import 'package:digital_awareness_app/view/home/detail_screen.dart';
 import 'package:digital_awareness_app/view/home/home_screen.dart';
 import 'package:digital_awareness_app/view/profile/profile_screen.dart';
 import 'package:flutter/material.dart';
