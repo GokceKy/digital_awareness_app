@@ -1,8 +1,9 @@
+import 'package:digital_awareness_app/view/home/carousel_widget.dart';
 import 'package:digital_awareness_app/view/home/custom_card.dart';
-
 import 'package:digital_awareness_app/view/home/custom_search_bar.dart.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
@@ -17,18 +18,27 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.surface,
-      body: Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(top: 10),
-              child: CustomSearchBar(),
-            ),
-            const SizedBox(height: 20),
-            Expanded(
-              child: ListView(
-                children: const [
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 10),
+                child: CustomSearchBar(),
+              ),
+              const SizedBox(height: 10),
+              const CarouselWidget(
+                imagePaths: [
+                  'assets/digitalfour.jpg',
+                  'assets/digitalone.jpg',
+                  'assets/digitalsix.jpg',
+                  'assets/digitaltwo.jpg',
+                ],
+              ),
+              const SizedBox(height: 20),
+              // Kartları kaydırılabilir hale getiren ListView yerine Column kullandık
+              const Column(
+                children: [
                   CustomCard(
                     title: 'Siber Zorbalık',
                     url: 'https://tr.wikipedia.org/wiki/Siber_zorbal%C4%B1k',
@@ -44,8 +54,8 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ],
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

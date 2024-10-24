@@ -1,7 +1,5 @@
 import 'package:digital_awareness_app/view/home/detail_screen.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class CustomCard extends StatelessWidget {
   final String title;
@@ -26,31 +24,39 @@ class CustomCard extends StatelessWidget {
           ),
         );
       },
-      child: Card(
-        elevation: 4,
-        margin: const EdgeInsets.symmetric(vertical: 5, horizontal: 16),
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                title,
-                style: const TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                ),
+      child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 16.0),
+        child: SizedBox(
+          width: MediaQuery.of(context).size.width * 1, // Genişlik ayarı
+          height: 100, // Yükseklik ayarı
+          child: Card(
+            color: Theme.of(context).colorScheme.surface.withOpacity(0.9),
+            elevation: 4,
+            margin: const EdgeInsets.symmetric(vertical: 5),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    title,
+                    style: const TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const SizedBox(height: 4),
+                  Text(
+                    url,
+                    style: const TextStyle(
+                      color: Colors.blue,
+                      fontSize: 14,
+                      decoration: TextDecoration.underline,
+                    ),
+                  ),
+                ],
               ),
-              const SizedBox(height: 8),
-              Text(
-                url,
-                style: const TextStyle(
-                  color: Colors.blue,
-                  fontSize: 14,
-                  decoration: TextDecoration.underline,
-                ),
-              ),
-            ],
+            ),
           ),
         ),
       ),
