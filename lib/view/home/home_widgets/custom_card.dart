@@ -25,7 +25,7 @@ class CustomCard extends StatelessWidget {
         );
       },
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 16.0),
+        padding: const EdgeInsets.symmetric(horizontal: 16.0),
         child: SizedBox(
           width: MediaQuery.of(context).size.width * 1, // Genişlik ayarı
           height: 100, // Yükseklik ayarı
