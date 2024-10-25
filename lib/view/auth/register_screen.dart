@@ -48,11 +48,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const SizedBox(height: 50),
-                //Logo
+
                 Image.asset(
-                  'assets/ikontwo.png', // PNG dosyasının yolu
-                  width: 100, // Genişlik
-                  height: 100, // Yükseklik
+                  'assets/ikontwo.png',
+                  width: 100,
+                  height: 100,
                 ),
                 const SizedBox(height: 50),
                 Text(

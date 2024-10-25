@@ -2,11 +2,11 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
 class CarouselWidget extends StatelessWidget {
-  final List<String> imagePaths; // Accept a list of image paths
+  final List<String> imagePaths;
 
   const CarouselWidget({
     super.key,
-    required this.imagePaths, // Pass the image paths in the constructor
+    required this.imagePaths,
   });
 
   @override

@@ -1,9 +1,8 @@
-import 'package:digital_awareness_app/view/home/carousel_widget.dart';
-import 'package:digital_awareness_app/view/home/custom_card.dart';
-import 'package:digital_awareness_app/view/home/custom_search_bar.dart.dart';
+import 'package:digital_awareness_app/view/home/home_widgets/carousel_widget.dart';
+import 'package:digital_awareness_app/view/home/home_widgets/custom_card.dart';
+import 'package:digital_awareness_app/view/home/home_widgets/custom_search_bar.dart.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
@@ -36,7 +35,6 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 20),
-              // Kartları kaydırılabilir hale getiren ListView yerine Column kullandık
               const Column(
                 children: [
                   CustomCard(
