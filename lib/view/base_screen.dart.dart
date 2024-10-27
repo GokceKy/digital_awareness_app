@@ -2,6 +2,7 @@ import 'package:digital_awareness_app/product/widgets/custom_app_bar.dart';
 import 'package:digital_awareness_app/view/home/detail_screen.dart';
 import 'package:digital_awareness_app/view/home/home_screen.dart';
 import 'package:digital_awareness_app/view/profile/profile_screen.dart';
+import 'package:digital_awareness_app/view/report/report_bullying_screen.dart';
 import 'package:flutter/material.dart';
 
 class BaseScreen extends StatefulWidget {
@@ -18,7 +19,7 @@ class _BaseScreenState extends State<BaseScreen> {
   final List<Widget> _pages = [
     HomeScreen(), // 0 - Home
     const Center(child: Text('Help Page')), // 1 - Help
-    const Center(child: Text('Clear Page')), // 2 - Clear
+    const ReportBullyingScreen(), // 2 - Clear
     ProfileScreen(), // 3 - Profile
   ];
 
@@ -26,7 +27,7 @@ class _BaseScreenState extends State<BaseScreen> {
   final List<String> _titles = [
     'Home', // Title for Home
     'Help', // Title for Help
-    'Clear', // Title for Clear
+    'Dijital Zorbalığı İhbar Et', // Title for Clear
     'Profile', // Title for Profile
   ];
 
