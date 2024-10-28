@@ -1,4 +1,5 @@
 import 'package:digital_awareness_app/product/widgets/custom_app_bar.dart';
+import 'package:digital_awareness_app/view/chat/chat_screen.dart';
 import 'package:digital_awareness_app/view/home/home_screen.dart';
 import 'package:digital_awareness_app/view/profile/profile_screen.dart';
 import 'package:digital_awareness_app/view/report/report_bullying_screen.dart';
@@ -18,17 +19,19 @@ class _BaseScreenState extends State<BaseScreen> {
   final List<Widget> _pages = [
     HomeScreen(),
     const Center(child: Text('Help Page')),
+    ChatScreen(),
     const ReportBullyingScreen(),
     ProfileScreen(),
   ];
 
   final List<String> _titles = [
     'Home',
-    'Help',
+    'Eğitimler kurslar',
+    'DanışmanAI',
     'Dijital Zorbalığı İhbar Et',
     'Profile',
   ];
-
+//sk-1drX7XIoDQ49lqBgmWu76_TcOxMsJurqpShv1hFaYsT3BlbkFJ_fHY4Yw2I2MZH-noPmrffNdAJ2t0ua1q74HXN_HRsA
   // İkonlardan birine tıklandığında çalışacak fonksiyon
   void _onItemTapped(int index) {
     setState(() {
@@ -68,11 +71,15 @@ class _BaseScreenState extends State<BaseScreen> {
                 label: '',
               ),
               NavigationDestination(
-                icon: Icon(Icons.help_outline),
+                icon: Icon(Icons.laptop_chromebook_rounded),
                 label: '',
               ),
               NavigationDestination(
-                icon: Icon(Icons.clear),
+                icon: Icon(Icons.chat_bubble_outline_outlined),
+                label: '',
+              ),
+              NavigationDestination(
+                icon: Icon(Icons.report_gmailerrorred_outlined),
                 label: '',
               ),
               NavigationDestination(
