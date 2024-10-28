@@ -1,15 +1,17 @@
+import 'package:digital_awareness_app/data/repo/emergency_contact_data.dart';
 import 'package:digital_awareness_app/view/home/home_widgets/carousel_widget.dart';
 import 'package:digital_awareness_app/view/home/home_widgets/custom_card.dart';
 import 'package:digital_awareness_app/view/home/home_widgets/custom_search_bar.dart.dart';
+import 'package:digital_awareness_app/view/home/home_widgets/emergency_carousel.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
   final user = FirebaseAuth.instance.currentUser!;
+  final EmergencyContactData contactData = EmergencyContactData();
 
   void _onCardTap(String url) {
-    // Detay sayfasına yönlendirme
     print('Card tapped with URL: $url');
   }
 
@@ -33,6 +35,10 @@ class HomeScreen extends StatelessWidget {
                   'assets/digitalsix.jpg',
                   'assets/digitaltwo.jpg',
                 ],
+              ),
+              const SizedBox(height: 10),
+              EmergencyCarousel(
+                emergencyContacts: contactData.emergencyContacts,
               ),
               const SizedBox(height: 20),
               const Column(

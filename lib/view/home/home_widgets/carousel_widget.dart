@@ -22,7 +22,7 @@ class CarouselWidget extends StatelessWidget {
         return Builder(
           builder: (BuildContext context) {
             return Container(
-              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+              width: MediaQuery.of(context).size.width * 0.92,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8),
               ),
