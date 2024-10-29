@@ -43,6 +43,7 @@ dependencies:
   carousel_slider: ^5.0.0
   flutter_svg: ^2.0.10+1
   flutter_gemini: ^2.0.3
+  cloud_firestore: ^5.4.4
 
 
 dev_dependencies:

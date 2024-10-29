@@ -1,11 +1,12 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ReportCardWidget extends StatelessWidget {
   final String title;
   final String description;
   final String linkText;
   final String linkUrl;
+
   const ReportCardWidget({
     super.key,
     required this.title,
@@ -13,6 +14,15 @@ class ReportCardWidget extends StatelessWidget {
     required this.linkText,
     required this.linkUrl,
   });
+
+  Future<void> launchURL(String url) async {
+    final Uri uri = Uri.parse(url);
+    if (await canLaunchUrl(uri)) {
+      await launchUrl(uri);
+    } else {
+      throw 'URL açma başarısız: $url';
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -34,13 +44,10 @@ class ReportCardWidget extends StatelessWidget {
             Text(description),
             const SizedBox(height: 8),
             GestureDetector(
-              onTap: () {
-                // Link açmak için URL'yi açma işlemi
-                //    launchURL(linkUrl);
-              },
+              onTap: () => launchURL(linkUrl),
               child: Text(
                 linkText,
-                style: TextStyle(
+                style: const TextStyle(
                   color: Colors.blue,
                   decoration: TextDecoration.underline,
                 ),

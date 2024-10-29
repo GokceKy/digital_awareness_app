@@ -29,7 +29,7 @@ class _ChatScreenState extends State<ChatScreen> {
   Gemini? _gemini;
 
   final String _systemPrompt =
-      "Merhaba! Ben sizin Dijital Danışman Asistanınızım. Burada size dijital güvenlik, destek, ve kişisel güvenlik konularında yardımcı olmak için bulunuyorum.";
+      "Merhaba! Ben sizin Dijital Danışman Asistanınızım. ";
 
   @override
   void initState() {
@@ -46,7 +46,7 @@ class _ChatScreenState extends State<ChatScreen> {
         0,
         ChatMessage(
           text:
-              "Merhaba! Ben sizin Dijital Danışman Asistanınızım. Burada size dijital güvenlik, destek, ve kişisel güvenlik konularında yardımcı olmak için bulunuyorum.",
+              " Burada size dijital güvenlik, destek, ve kişisel güvenlik konularında yardımcı olmak için bulunuyorum.",
           sentByUser: false,
         ),
       );
@@ -91,7 +91,7 @@ class _ChatScreenState extends State<ChatScreen> {
           ),
           if (_geminiInitialized)
             Container(
-              color: const Color(0xFFD3D3D3), // Açık gri arka plan
+              color: Theme.of(context).colorScheme.surface,
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
               child: Row(
                 children: <Widget>[
@@ -100,17 +100,34 @@ class _ChatScreenState extends State<ChatScreen> {
                       controller: _textController,
                       style: const TextStyle(
                           color: Colors.black), // Siyah yazı rengi
-                      decoration: const InputDecoration(
+                      decoration: InputDecoration(
                         hintText: 'Mesajınızı yazın...',
-                        hintStyle: TextStyle(color: Colors.grey),
-                        border: InputBorder.none,
+                        hintStyle: TextStyle(
+                          color: Theme.of(context).colorScheme.secondary,
+                          fontSize: 16,
+                        ),
+                        filled: true,
+                        fillColor: Theme.of(context).colorScheme.surface,
+                        contentPadding: const EdgeInsets.symmetric(
+                            vertical: 14, horizontal: 16),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Theme.of(context).colorScheme.secondary,
+                          ),
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                              color: Theme.of(context).colorScheme.primary),
+                          borderRadius: BorderRadius.circular(12),
+                        ),
                       ),
                       onSubmitted: (value) => _sendMessage(value),
                     ),
                   ),
                   IconButton(
                     icon: Icon(_isSending ? Icons.hourglass_empty : Icons.send,
-                        color: Colors.black),
+                        color: Theme.of(context).colorScheme.secondary),
                     onPressed: _isSending
                         ? null
                         : () => _sendMessage(_textController.text),

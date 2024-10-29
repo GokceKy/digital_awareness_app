@@ -20,7 +20,7 @@ class _BaseScreenState extends State<BaseScreen> {
     HomeScreen(),
     const Center(child: Text('Help Page')),
     ChatScreen(),
-    const ReportBullyingScreen(),
+    ReportBullyingScreen(),
     ProfileScreen(),
   ];
 
@@ -75,7 +75,7 @@ class _BaseScreenState extends State<BaseScreen> {
                 label: '',
               ),
               NavigationDestination(
-                icon: Icon(Icons.chat_bubble_outline_outlined),
+                icon: Icon(Icons.android),
                 label: '',
               ),
               NavigationDestination(
