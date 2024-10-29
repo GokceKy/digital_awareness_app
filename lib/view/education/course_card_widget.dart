@@ -15,15 +15,6 @@ class CourseCardWidget extends StatelessWidget {
     required this.courseLink,
   });
 
-  Future<void> launchURL(String url) async {
-    final Uri uri = Uri.parse(url);
-    if (await canLaunchUrl(uri)) {
-      await launchUrl(uri);
-    } else {
-      throw 'URL açma başarısız: $url';
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -63,7 +54,9 @@ class CourseCardWidget extends StatelessWidget {
                   ),
                   const SizedBox(height: 8),
                   GestureDetector(
-                    onTap: () => launchURL(courseLink),
+                    onTap: () => launchUrl(
+                      Uri.parse(courseLink),
+                    ),
                     child: Text(
                       'Daha Fazla Bilgi',
                       style: const TextStyle(
