@@ -24,7 +24,7 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             children: [
               Padding(
-                padding: const EdgeInsets.only(top: 10),
+                padding: const EdgeInsets.only(top: 5),
                 child: CustomSearchBar(),
               ),
               const SizedBox(height: 10),

@@ -33,13 +33,13 @@ class CourseScreen extends StatelessWidget {
           return Column(
             children: [
               Padding(
-                padding: const EdgeInsets.only(top: 10),
+                padding: const EdgeInsets.only(top: 5),
                 child: CustomSearchBar(),
               ),
               Expanded(
                 // Use Expanded here
                 child: ListView.builder(
-                  padding: const EdgeInsets.all(16.0),
+                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
                   itemCount: courseItems.length,
                   itemBuilder: (context, index) {
                     final data =
