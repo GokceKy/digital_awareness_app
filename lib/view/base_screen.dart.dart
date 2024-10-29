@@ -1,5 +1,6 @@
 import 'package:digital_awareness_app/product/widgets/custom_app_bar.dart';
 import 'package:digital_awareness_app/view/chat/chat_screen.dart';
+import 'package:digital_awareness_app/view/education/course_screen.dart';
 import 'package:digital_awareness_app/view/home/home_screen.dart';
 import 'package:digital_awareness_app/view/profile/profile_screen.dart';
 import 'package:digital_awareness_app/view/report/report_bullying_screen.dart';
@@ -18,7 +19,7 @@ class _BaseScreenState extends State<BaseScreen> {
   // Sayfaların listesi
   final List<Widget> _pages = [
     HomeScreen(),
-    const Center(child: Text('Help Page')),
+    CourseScreen(),
     ChatScreen(),
     ReportBullyingScreen(),
     ProfileScreen(),
