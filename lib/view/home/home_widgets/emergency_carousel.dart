@@ -26,15 +26,12 @@ class EmergencyCarousel extends StatelessWidget {
               width: MediaQuery.of(context).size.width * 0.92,
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8),
+                borderRadius: BorderRadius.circular(12), // Köşe yuvarlaklığı
                 color: Colors.white,
-                boxShadow: const [
-                  BoxShadow(
-                    color: Colors.black26,
-                    blurRadius: 4,
-                    offset: Offset(0, 4),
-                  ),
-                ],
+                border: Border.all(
+                  color: Theme.of(context).colorScheme.secondary, // Kenar rengi
+                  width: 1.0, // Kenar kalınlığı
+                ),
               ),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(8),

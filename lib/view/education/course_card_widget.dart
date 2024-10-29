@@ -28,17 +28,24 @@ class CourseCardWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       margin: const EdgeInsets.symmetric(vertical: 10),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(12), // Köşe yuvarlaklığı
+        side: BorderSide(
+          color: Theme.of(context).colorScheme.secondary, // Kenar rengi
+          width: 1.0,
+        ),
+      ),
       child: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Row(
           children: [
             Image.network(
               courseImage,
-              width: 120, // Resim genişliği
-              height: 80, // Resim yüksekliği
+              width: 120,
+              height: 80,
               fit: BoxFit.fill,
             ),
-            const SizedBox(width: 16), // Resim ve metin arasında boşluk
+            const SizedBox(width: 16),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,

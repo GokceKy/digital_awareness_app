@@ -27,11 +27,17 @@ class CustomCard extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16.0),
         child: SizedBox(
-          width: MediaQuery.of(context).size.width * 1, // Genişlik ayarı
-          height: 100, // Yükseklik ayarı
+          width: MediaQuery.of(context).size.width * 1,
+          height: 100,
           child: Card(
-            color: Theme.of(context).colorScheme.surface.withOpacity(0.9),
-            elevation: 4,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
+              side: BorderSide(
+                color: Theme.of(context).colorScheme.secondary,
+                width: 1.0,
+              ),
+            ),
+            color: Theme.of(context).colorScheme.surface,
             margin: const EdgeInsets.symmetric(vertical: 5),
             child: Padding(
               padding: const EdgeInsets.all(8.0),
