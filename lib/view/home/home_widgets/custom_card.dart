@@ -40,7 +40,7 @@ class CustomCard extends StatelessWidget {
             color: Theme.of(context).colorScheme.surface,
             margin: const EdgeInsets.symmetric(vertical: 5),
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.only(left: 16.0, top: 14.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [

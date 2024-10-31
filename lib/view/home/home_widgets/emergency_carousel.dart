@@ -27,7 +27,7 @@ class EmergencyCarousel extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(12), // Köşe yuvarlaklığı
-                color: Colors.white,
+                color: Theme.of(context).colorScheme.surface,
                 border: Border.all(
                   color: Theme.of(context).colorScheme.secondary, // Kenar rengi
                   width: 1.0, // Kenar kalınlığı

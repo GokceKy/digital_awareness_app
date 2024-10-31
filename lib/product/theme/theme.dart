@@ -5,7 +5,7 @@ ThemeData lightMode = ThemeData(
   colorScheme: ColorScheme.light(
     surface: Colors.white,
     primary: const Color.fromRGBO(23, 63, 53, 1),
-    secondary: const Color.fromRGBO(183, 206, 149, 1),
+    secondary: const Color.fromRGBO(86, 145, 129, 1),
   ),
 );
 ThemeData darkMode = ThemeData(
