@@ -1,16 +1,32 @@
-# digital_awareness_app
 
-A new Flutter project.
+# Digital Awareness Application
 
-## Getting Started
+This project is developed as a graduation project for the Hi-Code Mobile Application Workshop, aiming to increase digital awareness through a mobile app.
 
-This project is a starting point for a Flutter application.
+## Features
 
-A few resources to get you started if this is your first Flutter project:
+- **Login & Registration**  
+  Users can securely log in or create an account using Firebase integration.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **Home Screen**  
+  The home screen presents users with information on digital awareness and related topics, fetched from Wikipedia via an API.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- **Training & Courses**  
+  The training and courses screen displays categorized cards on various topics. The information on these cards is sourced from the Firestore database, allowing users to navigate to the desired course.
+
+- **Advisor AI**  
+  The Advisor AI screen provides users with a small AI assistant integrated using Gemini.
+
+- **Report Digital Bullying**  
+  This screen offers essential links for reaching out to support and reporting locations in Turkey for digital bullying cases.
+
+- **Profile Screen**  
+  A classic profile screen where users can view their profile information and change the app theme.
+
+## Technologies Used
+
+- **Firebase**
+- **Firestore**
+- **Wikipedia API**
+- **Gemini AI**
+
