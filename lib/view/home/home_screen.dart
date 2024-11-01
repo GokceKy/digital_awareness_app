@@ -56,6 +56,15 @@ class HomeScreen extends StatelessWidget {
                     url:
                         'https://tr.wikipedia.org/wiki/%C4%B0nternet_g%C3%BCvenli%C4%9Fi',
                   ),
+                  CustomCard(
+                    title: 'Israrlı Siber Takip',
+                    url:
+                        'https://tr.wikipedia.org/wiki/Israrl%C4%B1_siber_takip',
+                  ),
+                  CustomCard(
+                    title: 'Gizlilik',
+                    url: 'https://tr.wikipedia.org/wiki/Gizlilik',
+                  ),
                 ],
               ),
             ],
