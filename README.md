@@ -9,7 +9,7 @@ This project is developed as a graduation project for the Hi-Code Mobile Applica
   Users can securely log in or create an account using Firebase integration.
 
 - **Home Screen**  
-  The home screen presents users with information on digital awareness and related topics, fetched from Wikipedia via an API.
+  The home screen provides users with information on digital awareness and related topics, sourced from Wikipedia via an API. Additionally, it includes emergency hotlines that users can tap to initiate a phone call directly.
 
 - **Training & Courses**  
   The training and courses screen displays categorized cards on various topics. The information on these cards is sourced from the Firestore database, allowing users to navigate to the desired course.
