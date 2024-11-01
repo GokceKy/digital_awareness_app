@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Digital Awareness App',
+      title: 'DigiSOS',
       home: const SplashScreen(),
       theme: Provider.of<ThemeProvider>(context).themeData,
       debugShowCheckedModeBanner: false,
