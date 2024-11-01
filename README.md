@@ -1,5 +1,5 @@
 
-# Digital Awareness Application
+# DigiSOS
 
 This project is developed as a graduation project for the Hi-Code Mobile Application Workshop, aiming to increase digital awareness through a mobile app.
 
@@ -18,7 +18,7 @@ This project is developed as a graduation project for the Hi-Code Mobile Applica
   The Advisor AI screen provides users with a small AI assistant integrated using Gemini.
 
 - **Report Digital Bullying**  
-  This screen offers essential links for reaching out to support and reporting locations in Turkey for digital bullying cases.
+  This screen offers essential links for reaching out to support and reporting locations in Turkey for digital bullying cases. The information on these cards is sourced from the Firestore database.
 
 - **Profile Screen**  
   A classic profile screen where users can view their profile information and change the app theme.
